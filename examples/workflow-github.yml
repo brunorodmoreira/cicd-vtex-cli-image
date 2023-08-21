@@ -12,6 +12,9 @@ jobs:
 
     container:
       image: ghcr.io/brunorodmoreira/cicd-vtex-cli-image:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ github.token }}
 
     steps:
       - name: Checkout code
@@ -20,8 +23,8 @@ jobs:
       - name: Create VTEX Session
         run: create-session --account ${{ secrets.VTEX_ACCOUNT }} --appkey ${{ secrets.VTEX_APP_KEY }} --apptoken ${{ secrets.VTEX_APP_TOKEN }}
 
-      - name: VTEX Publish
-        run: vtex publish
+      - name: vtex publish
+        run: vtex publish -y
 
-      - name: VTEX deploy
+      - name: vtex deploy
         run: vtex deploy -f -y
