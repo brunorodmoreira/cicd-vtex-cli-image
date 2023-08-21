@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: my-custom-image
+      image: ghcr.io/brunorodmoreira/cicd-vtex-cli-image:latest
 
     steps:
       - name: Checkout code
