@@ -27,4 +27,4 @@ jobs:
         run: vtex publish -y
 
       - name: vtex deploy
-        run: vtex deploy -f -y
+        run: yes Y | vtex deploy -f
