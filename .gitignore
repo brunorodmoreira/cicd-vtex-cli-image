@@ -20,3 +20,5 @@ coverage/
 *.log
 logs/
 log/
+
+.env
