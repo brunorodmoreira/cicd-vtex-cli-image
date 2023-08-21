@@ -1,0 +1,13 @@
+{
+    "name": "create-session",
+    "bin": {
+      "create-session": "./bin/create-session"
+    },
+    "preferGlobal": true,
+    "scripts": {
+      "start": "node node/index.js"
+    },
+    "engines": {
+      "node": ">=18.0.0"
+    }
+}
