@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create VTEX Session
-        run: create-session --account=${{ secrets.VTEX_ACCOUNT }} --appkey=${{ secrets.VTEX_APP_KEY }} --apptoken=${{ secrets.VTEX_APP_TOKEN }}
+        run: create-session --account ${{ secrets.VTEX_ACCOUNT }} --appkey ${{ secrets.VTEX_APP_KEY }} --apptoken ${{ secrets.VTEX_APP_TOKEN }}
 
       - name: VTEX Publish
         run: vtex publish
